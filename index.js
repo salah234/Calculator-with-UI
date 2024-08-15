@@ -21,6 +21,10 @@ buttons.forEach(button => {
                 currResult = (parseFloat(currResult) * -1).toString();
                 updateDisplay()
             } 
+        }
+        else if (num === '<') {
+            currResult = currResult.slice(0, -1)
+            updateDisplay()
         } else if (num === '=') {
             if (firstOperator && operator && currResult) { // If there is an equation
                 let total;
